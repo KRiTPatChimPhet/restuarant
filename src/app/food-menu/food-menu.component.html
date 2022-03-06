@@ -6,5 +6,10 @@
   [disabled]="!allowAddMenuItem"
   (click)="onCreatMenuItem()"
 >เพิ่มรายการเมนู</button>
-<p>{{ menuItemCreationStatus }}</p>
-<app-food-menu-item></app-food-menu-item>
+<!-- <p>{{ menuItemCreationStatus }}</p> -->
+<p *ngIf="menuItemCreated; else noMenuItem">{{menuItemCreationStatus}}</p>
+<ng-template #noMenuItem>
+  <p>ไม่มีการเพิ่มรายการเมนู</p>
+</ng-template>
+<app-food-menu-item *ngFor="let menu-item of menuList"></app-food-menu-item>
+

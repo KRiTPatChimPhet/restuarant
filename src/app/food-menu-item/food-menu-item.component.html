@@ -1,1 +1,3 @@
-<p>{{ "เมนู" }} รายการที่ {{foodMenuId}} อยู่ในสถานะ {{getFoodMenuStatus()}}</p>
+<p [ngStyle]="{color: getColor()}"
+   [ngClass]="{available: foodMenuStatus === 'Available'}"
+> เมนูรายการที่ {{foodMenuId}} อยู่ในสถานะ {{getFoodMenuStatus()}}</p>
