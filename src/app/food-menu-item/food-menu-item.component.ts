@@ -9,13 +9,8 @@ export class FoodMenuItemComponent implements OnInit {
   foodMenuId: number = 1;
   // foodMenuStatus: string = 'Available';
   foodMenuStatus = Math.random() > 0.5 ? "Available" : "Not Availible";
-  arrayIcon = ["<i class="fa-solid fa-candy-cane"></i>"];
-  iconMenu = Math.floor(Math.random()*this.arrayIcon.length);
-  icon = this.arrayIcon[this.iconMenu];
-
-  getIcon() {
-    return this.icon;
-  }
+  arrayIcon = ['fish','shrimp','bacon','drumstick','carrot','mug-saucer']
+  randomIcon = this.arrayIcon[Math.floor(Math.random() * this.arrayIcon.length)]
 
   getFoodMenuStatus() {
     return this.foodMenuStatus;

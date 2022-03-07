@@ -1,3 +1,9 @@
 <p [ngStyle]="{color: getColor()}"
    [ngClass]="{available: foodMenuStatus === 'Available'}"
-> เมนูรายการที่ {{foodMenuId}} อยู่ในสถานะ {{getFoodMenuStatus()}}</p>
+><i [ngClass]="{'fa-solid fa-fish': randomIcon ==='fish'}"></i>
+<i [ngClass]="{'fa-solid fa-shrimp': randomIcon ==='shrimp'}"></i>
+<i [ngClass]="{'fa-solid fa-bacon': randomIcon ==='bacon'}"></i>
+<i [ngClass]="{'fa-solid fa-drumstick-bite': randomIcon ==='drumstick'}"></i>
+<i [ngClass]="{'fa-solid fa-mug-saucer': randomIcon ==='mug-saucer'}"></i>
+<i [ngClass]="{'fa-solid fa-carrot': randomIcon ==='carrot'}"></i>
+ เมนูรายการที่ {{foodMenuId}} อยู่ในสถานะ {{getFoodMenuStatus()}}</p>
